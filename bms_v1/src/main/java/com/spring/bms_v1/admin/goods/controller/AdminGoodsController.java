@@ -217,7 +217,6 @@ public class AdminGoodsController {
 
 	}
 	
-	/// 엑셀 추가 , 개인정보보호동의 추가
 
 	@RequestMapping(value="/goodsExcelExport" , method=RequestMethod.GET)
 	public void goodsExcelExport(HttpServletResponse response , @RequestParam Map<String, String> dateMap) throws Exception {

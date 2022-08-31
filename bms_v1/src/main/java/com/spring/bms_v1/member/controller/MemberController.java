@@ -112,7 +112,6 @@ public class MemberController {
 		return new ResponseEntity<Object>(jsScript, responseHeaders, HttpStatus.OK);
 	
 	}
-
 	
 
 }

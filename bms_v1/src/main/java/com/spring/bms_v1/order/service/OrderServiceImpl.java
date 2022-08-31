@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.spring.bms_v1.goods.dto.GoodsDto;
 import com.spring.bms_v1.member.dto.MemberDto;
@@ -19,6 +20,7 @@ public class OrderServiceImpl implements OrderService {
 	@Autowired
 	private OrderDao orderDao;
 	
+	@Transactional
 	public void addOrder(OrderDto orderDto , int point) throws Exception{
 		
 		Map<String, Object> orderMap = new HashMap<String, Object>();
@@ -49,9 +51,9 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
+	@Transactional
 	public void addOrderByCart(Map<String, String> orderListMap) throws Exception {
-		System.out.println("map");
-		System.out.println(orderListMap);
+	
 		List<OrderDto> orderList = new ArrayList<OrderDto>();
 		
 		String[] temp1 = orderListMap.get("goodsCdList").split(","); 

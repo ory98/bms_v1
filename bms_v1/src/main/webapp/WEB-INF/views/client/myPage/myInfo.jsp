@@ -19,7 +19,7 @@
 			var dateBirth = $("#birthY").val() + "-" + $("#birthM").val() + "-" + $("#birthD").val();
 			$("[name='dateBirth']").val(dateBirth);
 		});
-		
+		console.log(dateBirth);
 	});
 	
 	function removeMember(){
